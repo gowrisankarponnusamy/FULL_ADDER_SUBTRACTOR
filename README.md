@@ -54,15 +54,18 @@ Write the detailed procedure here
 ```
 Developed by:GOWRISANKAR P
 RegisterNumber:212222230041
+
 module exp04(a,b,c,sum,carry,BO,DIFF);
 input a,b,c;
 output sum,carry,BO,DIFF;
-//FULL ADDER
+
+**FULL ADDER**
 assign sum = a^b^c;
 assign carry = (a&b) | (b&c) | (a&c);
 wire a0;
 not (a0,a);
-//FUKK SUBTRACTOR
+
+**FULL SUBTRACTOR**
 assign DIFF = a^b^c;
 assign BO = (a0&b) | (b&c) | (a0&c);
 endmodule
